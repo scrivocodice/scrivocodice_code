@@ -1,3 +1,20 @@
+def is_iterabile(obj):
+    """
+    Verifica se un oggetto è o meno iterabile.
+
+    Parametri:
+        obj: oggetto da verificare
+
+    Restituisce:
+        True: se l'oggetto è iterabile
+        False: se l'oggetto non è iterabile
+    """
+    try:
+        _ = iter(obj)
+        return True
+    except TypeError:
+        return False
+
 colori = ['rosso', 'verde', 'blu']
 
 colori_iteratore = iter(colori)
